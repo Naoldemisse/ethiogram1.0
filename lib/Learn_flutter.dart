@@ -17,6 +17,9 @@ class _LearnflutterState extends State<Learnflutter> {
       body: Column(
         children: [
           Image.asset('images/Flutter.png'),
+          const SizedBox(
+            height: 7,
+          ),
           const Divider(
             color: Colors.black,
           ),
