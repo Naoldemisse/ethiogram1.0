@@ -1,3 +1,4 @@
+import 'package:ethiogram/home_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -32,6 +33,7 @@ class _RootpageState extends State<Rootpage> {
       appBar: AppBar(
         title: const Text('Demo Test'),
       ),
+      body: const HomePage(),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           debugPrint('The floating button is working');
@@ -43,6 +45,12 @@ class _RootpageState extends State<Rootpage> {
           NavigationDestination(icon: Icon(Icons.home), label: 'Home'),
           NavigationDestination(icon: Icon(Icons.person), label: 'Profile'),
         ],
+        onDestinationSelected: (int index) {
+          setState(() {
+            currentPage = index;
+          });
+        },
+        selectedIndex: currentPage,
       ),
     );
   }
