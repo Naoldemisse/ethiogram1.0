@@ -15,7 +15,12 @@ class _LearnflutterState extends State<Learnflutter> {
         title: const Text("Learn flutter"),
       ),
       body: Column(
-        children: [Image.asset('images/Flutter.png'), const Divider()],
+        children: [
+          Image.asset('images/Flutter.png'),
+          const Divider(
+            color: Colors.black,
+          ),
+        ],
       ),
     );
   }
